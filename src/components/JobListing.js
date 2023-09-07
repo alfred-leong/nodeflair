@@ -38,13 +38,13 @@ const JobListing = ({ jobListings }) => {
             </div>
             <hr className="divider" />
             <div className="tech-stack">
-                <div className="tech-stack-list">
+                <ul className="tech-stack-list">
                 {job.techStack.map((tech, techIndex) => (
-                    <div key={techIndex} className="tech-stack-item">
+                    <li key={techIndex} className="tech-stack-item">
                     {tech}
-                    </div>
+                    </li>
                 ))}
-                </div>
+                </ul>
             </div>
             </div>
         ))}

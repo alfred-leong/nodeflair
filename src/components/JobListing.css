@@ -9,7 +9,7 @@
   }
   
   .job {
-    width: 400px; /* Fixed width for job listing cards */
+    width: 80%; /* Fixed width for job listing cards */
     height: 140px; /* Fixed height for job listing cards */
     border: 1px solid #ccc;
     margin-bottom: 16px;
@@ -82,7 +82,8 @@
   }
   
   .job-updated-time {
-    color: #888;
+    color: green;
+    font-weight: bold;
   }
 
   .job-location {
@@ -121,12 +122,17 @@
   }
   
   .tech-stack-list {
-    display: flex;
-    flex-wrap: nowrap;
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 5px;
+    padding-inline-start: 0;
     max-height: 100%; /* Ensure the tech stack list respects the card's height */
+    text-overflow: ellipsis;
+    width: 100%;
   }
   
   .tech-stack-item {
+    display: inline;
     padding: 4px 8px;
     margin: 0 4px;
     border: 1px solid #ccc;
@@ -157,6 +163,9 @@
     .job-list-container {
       width: 100%;
       /* Add styles to hide the other content */
+    }
+    .selected-job-title-container {
+        display: none;
     }
   }
   
