@@ -34,7 +34,7 @@ const JobListing = ({ jobListings }) => {
                         {job.jobLocation}
                     </span>
                 </div>
-                <div className="job-salary">{job.estimatedSalary}<span className="est-container">{"EST"}</span></div>
+                {job.estimatedSalary && <div className="job-salary">{job.estimatedSalary}<span className="est-container">{"EST"}</span></div>}
             </div>
             <hr className="divider" />
             <div className="tech-stack">

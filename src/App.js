@@ -5,33 +5,52 @@ const App = () => {
   // Sample job listings data (replace with your actual data)
   const jobListings = [
     {
-      companyLogo: 'https://play-lh.googleusercontent.com/Ui_-OW6UJI147ySDX9guWWDiCPSq1vtxoC-xG17BU2FpU0Fi6qkWwuLdpddmT9fqrA=w240-h480-rw',
-      companyName: 'TikTok',
-      companyRatings: 3.9,
-      jobTitle: 'Intern - Technology Consulting, Cybersecurity (2024)',
-      updatedTime: 'about 1 hour ago',
+      companyLogo: 'data:image/png;base64,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',
+      companyName: 'GovTech',
+      companyRatings: 4,
+      jobTitle: 'Technical Product Manager (Cloud)',
+      updatedTime: 'less than a minute ago',
       jobLocation: 'Singapore',
-      estimatedSalary: 'S$2000 - S$4000 / mth',
-      jobCategory: 'Fullstack',
-      techStack: ['Graph', 'TensorFlow', 'PyTorch', 'Spark'],
+      jobCategory: 'PM',
+      techStack: ['play', 'IAM'],
     },
     {
-      companyLogo: 'https://pbs.twimg.com/profile_images/1605297940242669568/q8-vPggS_400x400.jpg',
-      companyName: 'Google',
+      companyLogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSchKzzsheMHnRu2uiVC76EqgbIpNKOo_k6uhj37L&s',
+      companyName: 'Coupang',
       companyRatings: 3.9,
-      jobTitle: 'Data Analyst Intern',
+      jobTitle: 'Staff, Back-end Engineer (Coupang Play)',
+      updatedTime: '37 mins ago',
+      jobLocation: 'Singapore',
+      estimatedSalary: 'S$12,500 - S$20,250 / mth',
+      jobCategory: 'Backend',
+      techStack: ['Rest API', 'API','play', 'Modular', 'Node.js', 'JavaScript'],
+    },
+    {
+      companyLogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzFXPbBAeAbAwv5AcYsKUqchkIIoLAaBdRtidAl-E&s',
+      companyName: 'Embed',
+      companyRatings: 3.5,
+      jobTitle: 'Senior Software Engineer (.Net)',
       updatedTime: 'about 1 hour ago',
       jobLocation: 'Singapore',
-      estimatedSalary: 'S$2000 - S$4000 / mth',
-      jobCategory: 'Fullstack',
-      techStack: ['Graph', 'TensorFlow','Spark', 'Python', 'C++', 'JavaScript'],
+      jobCategory: 'FullStack',
+      techStack: ['Rest API', 'Docker', 'API', 'TDD', 'JavaScript', 'SQL', 'Others'],
+    },
+    {
+      companyLogo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Circles_Life_Color_RGB.svg/1200px-Circles_Life_Color_RGB.svg.png',
+      companyName: 'Circles.Life',
+      companyRatings: 3,
+      jobTitle: 'Principal Engineer (Security)',
+      updatedTime: 'about 1 hour ago',
+      jobLocation: 'Singapore',
+      estimatedSalary: 'S$12,500 - S$20,500 / mth',
+      jobCategory: 'Cybersec Eng',
+      techStack: ['Rest API', 'API','play', 'Modular', 'Node.js', 'JavaScript'],
     },
   ];
 
   return (
     <div className="App">
       <JobListing jobListings={jobListings} />
-      {/* Add other content or components here */}
     </div>
   );
 };

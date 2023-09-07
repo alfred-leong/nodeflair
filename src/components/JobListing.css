@@ -10,7 +10,6 @@
   
   .job {
     width: 80%; /* Fixed width for job listing cards */
-    height: 140px; /* Fixed height for job listing cards */
     border: 1px solid #ccc;
     margin-bottom: 16px;
     border-radius: 10px; /* Rounded edges for the card */
@@ -47,14 +46,18 @@
   }
   
   .job-category {
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 12px;
     height: 18px;
-    color: green; /* Green color for the job category */
+    color: #5ABD6F; /* Green color for the job category */
     padding: 4px 8px;
     margin: 4px;
     background-color: #E2F6EA;
     border-radius: 4px; /* Rounded edges for tech stack items */
-    margin-left: auto
+    margin-left: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
   }
   
   .divider {
@@ -64,13 +67,13 @@
   
   .job-details {
     overflow: hidden;
-    width: 240px;
+    width: 250px;
     margin-left: 68px;
     font-size: 14px;
   }
   
   .job-title {
-    width: 240px;
+    width: 250px;
     font-weight: bold;
     font-size: 16px;
     display: -webkit-box;
@@ -118,7 +121,7 @@
     white-space: nowrap; /* Prevent tech stack from wrapping */
     overflow: hidden;
     text-overflow: ellipsis; /* Add ellipsis for overflowed tech stack */
-    min-height: 40px;
+    height: 30px;
   }
   
   .tech-stack-list {
@@ -162,7 +165,7 @@
   @media (max-width: 768px) {
     .job-list-container {
         width: 100%;
-        margin: 0;
+        margin-left: 5%;
     }
     .selected-job-title-container {
         display: none;
