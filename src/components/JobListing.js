@@ -11,7 +11,7 @@ const JobListing = ({ jobListings }) => {
     const selectedJobTitle = selectedJob !== null ? jobListings[selectedJob].jobTitle : '';
 
   return (
-    <div className="container">
+    <div className="main">
         <div className="job-list-container">
         {jobListings.map((job, index) => (
             <div key={index} 
@@ -19,7 +19,7 @@ const JobListing = ({ jobListings }) => {
             onClick={() => handleJobSelect(index)}>
             <div className="job-header">
                 <img src={job.companyLogo} alt={job.companyName} className="company-logo" />
-                <div className="company-info">
+                <div className="job-main-text">
                     <span className="company-name">{job.companyName}</span>
                     <span className="company-ratings">{job.companyRatings.toFixed(1)}&nbsp;★</span>
                     <div className="job-title">{job.jobTitle}</div>

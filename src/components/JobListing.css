@@ -1,5 +1,5 @@
 /* src/components/JobListing.css */
-.container {
+.main {
     display: flex;
 }
 .job-list-container {
@@ -38,7 +38,7 @@
     border-radius: 10%; /* Rounded edges for the logo */
   }
 
-  .company-info {
+  .job-main-text {
     margin-left: 18px;
   }
   
