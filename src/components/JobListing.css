@@ -174,18 +174,5 @@
     .selected-job-title-container {
         display: none;
     }
-    .job-title {
-        font-size: 12px;
-    }
-    .job-category {
-        font-size: 8px;
-    }
-    .job-details {
-        font-size: 10px;
-    }
-    .tech-stack-item {
-        font-size: 10px;
-    }
-
   }
   
