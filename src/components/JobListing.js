@@ -11,7 +11,7 @@ const JobListing = ({ jobListings }) => {
     const selectedJobTitle = selectedJob !== null ? jobListings[selectedJob].jobTitle : '';
 
   return (
-    <div class="container">
+    <div className="container">
         <div className="job-list-container">
         {jobListings.map((job, index) => (
             <div key={index} 
@@ -38,13 +38,13 @@ const JobListing = ({ jobListings }) => {
             </div>
             <hr className="divider" />
             <div className="tech-stack">
-                <ul className="tech-stack-list">
+                <div className="tech-stack-list">
                 {job.techStack.map((tech, techIndex) => (
-                    <li key={techIndex} className="tech-stack-item">
+                    <span key={techIndex} className="tech-stack-item">
                     {tech}
-                    </li>
+                    </span>
                 ))}
-                </ul>
+                </div>
             </div>
             </div>
         ))}

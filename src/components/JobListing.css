@@ -9,6 +9,7 @@
   }
   
   .job {
+    transition: box-shadow .3s;
     width: 80%; /* Fixed width for job listing cards */
     border: 1px solid #ccc;
     margin-bottom: 16px;
@@ -16,6 +17,10 @@
     padding: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .job:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
   }
 
   .selected {
@@ -128,7 +133,6 @@
     list-style-type: none;
     display: inline-block;
     margin-top: 5px;
-    padding-inline-start: 0;
     max-height: 100%; /* Ensure the tech stack list respects the card's height */
     text-overflow: ellipsis;
     width: 100%;
